@@ -5,5 +5,5 @@ File Explained:
 
 For **Controlling App.** please go to other links:
 
-**Robot TR Controlling App.** (link will be added)
+**Robot TR Controlling App.** (https://github.com/rithya-cheng/robot_tr)
 **Robot DR Controlling App.** (link will be added)
