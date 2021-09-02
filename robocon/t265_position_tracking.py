@@ -27,6 +27,8 @@ pipe.start(cfg)
 x = 115000
 y = 5000
 distance = 0
+
+
 def tracking():
     try:
         while(True):
@@ -37,7 +39,7 @@ def tracking():
             pose = frames.get_pose_frame()
 
             if pose:
-                    # Print some of the pose data to the terminal
+                # Print some of the pose data to the terminal
                 data = pose.get_pose_data()
                 # print("Frame #{}".format(pose.frame_number))
                 # print("Position: {}".format(data.translation))
@@ -50,42 +52,7 @@ def tracking():
     finally:
         pipe.stop()   
 
-# def depthsensor():
-#     print("Press 1 for Blue or 2 for Red ")
-#     id = int(input())
 
-#     distance = obj.depth_s(id)  
-#     return distance
-
-    
-def motor_run():
-    global x, y
-    count = 1
-
-    while(True):
-        xd, yd = tr.control()
-        print("#{} times".format(count))
-        print ("**From Camera")
-        print ("X when motor is stop {}".format(x))
-        print ("Y when motor is stop {}".format(y))
-        print ("**From motor")
-        print ("X = {}".format(xd))
-        print ("Y = {}".format(yd))
-        print ("**From Depth")
-        # for i in range(0,10):
-        #     print (i,"Distance is ", depthsensor())
-        #     count = count + 1
-
-def gyroo():
-    print("gyro: ", gy.gyro_d)
-    return gy.gyro_d
-    
-
-
-# Thread(target = depthsensor).start()
-Thread(target = gyroo).start()
-Thread(target = tracking).start()
-Thread(target = motor_run).start()
 
 
 

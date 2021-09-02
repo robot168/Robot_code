@@ -27,8 +27,9 @@ import tkinter.messagebox as msb
 
 from functools import partial
 
-import v2_moverobot as mr
-import Object_Distance_Height as obj
+import move_motor_latest as mr
+
+# import Object_Distance_Height as obj
 
 class AStarPlanner:
 
@@ -521,9 +522,12 @@ def control():
     elif (id==10):
         mr.cubic_Polynominal(0,20,0,20,2,0,0,0,0,0)
         return sx,sy
+    else:
+        print("stop move")
     # elif (id==8):
     #     cx,cy = program(cx-2,cy)
     #     return cx-2, cy 
+# control()
     
 
        
