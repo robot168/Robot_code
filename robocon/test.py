@@ -181,5 +181,3 @@ try:
 
 finally:
     GPIO.cleanup()  # cleanup all GPIOs
-
-    

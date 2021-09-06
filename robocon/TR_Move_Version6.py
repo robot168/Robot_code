@@ -484,50 +484,26 @@ def control():
     print("Please input the number: ")
     id = int(input())
     if(id==0):
-        cx,cy = program(115,5)
-        return 115, 5
-    if(id==1):
-        cx,cy = program(5,10)
-        return 5, 10
+        mr.cubic_Polynominal(0,40,0,0,6,0,0,0,0,0)
+    elif(id==1):
+        mr.cubic_Polynominal(0,-40,0,0,6,0,0,0,0,0)
     elif(id==2):
-        cx,cy = program(65,15)
-        return 65, 15
+        mr.cubic_Polynominal(0,0,0,40,6,0,0,0,0,0)
     elif(id==3):
-        cx,cy = program(15,55)
-        return 15,55
+        mr.cubic_Polynominal(0,0,0,-40,6,0,0,0,0,0)
     # forward
     elif(id==4):
-        mr.cubic_Polynominal(0,5,0,0,2,0,0,0,0,0)
-        return sx,sy
-    # backward
-    elif (id==5):
-        mr.cubic_Polynominal(0,-5,0,0,2,0,0,0,0,0)
-        return sx, sy
-    # left
-    elif (id==6):
-        mr.cubic_Polynominal(0,20,0,0,4,0,0,0,0,0)
-        return sx,sy
-    # right 
-    elif (id==7):
-        mr.cubic_Polynominal(0,0,0,20,4,0,0,0,0,0)
-        return sx,sy
-    # spin right 
-    elif (id==8):
-        mr.cubic_Polynominal(0,0,0,0,1,0,0,0,0,0.1)
-        return sx,sy
-    #spin left 
-    elif (id==9):
-        mr.cubic_Polynominal(0,0,0,0,1,0,0,0,0,-0.1)
-        return sx,sy
-    elif (id==10):
-        mr.cubic_Polynominal(0,20,0,20,2,0,0,0,0,0)
-        return sx,sy
+        mr.cubic_Polynominal(0,10,0,10,2,0,0,0,0,0)
     else:
         print("stop move")
+        mr.cubic_Polynominal(0,40,0,0,6,0,0,0,0,0)
     # elif (id==8):
     #     cx,cy = program(cx-2,cy)
     #     return cx-2, cy 
 # control()
+
+while True:
+    control()
     
 
        
